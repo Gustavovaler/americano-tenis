@@ -2130,10 +2130,24 @@ __webpack_require__.r(__webpack_exports__);
     showResultados: function showResultados() {},
     showJugadores: function showJugadores() {},
     newPlayer: function newPlayer() {
+      var _this2 = this;
+
       this.submitted = true;
 
       if (this.selected_zona != null && this.selected_name != null) {
-        console.log(this.selected_zona, this.selected_name);
+        console.log();
+        var data = {
+          zona: this.selected_zona,
+          name: this.selected_name
+        };
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("http://americano.test", "/player"), data).then(function (res) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/players")).then(function (res) {
+            _this2.jugadores_list = res.data;
+            _this2.selected_zona = null;
+            _this2.selected_name = '';
+            _this2.submitted = false;
+          });
+        })["catch"](console.error);
       }
     }
   }
@@ -38849,6 +38863,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "foot" }, [
       _c("i", [_vm._v("Individual Masculino")]),
+      _vm._v("      "),
+      _c("a", { attrs: { href: "/" } }, [_vm._v("Publico")]),
     ])
   },
 ]

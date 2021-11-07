@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\WelcomeController;
 use App\Models\Player;
 use App\Models\PlayerMatch;
@@ -25,7 +26,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/matches', [App\Http\Controllers\ResultadoController::class, 'getPartidos']);
+Route::get('/matches/calculate' , [PlayerController::class, 'autoCalculateMatches']);
 Route::get('/posiciones', [App\Http\Controllers\ResultadoController::class, 'getPosiciones']);
 Route::get('/players', function(){return Player::all();});
+Route::post('/player', [PlayerController::class, 'store']);
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');

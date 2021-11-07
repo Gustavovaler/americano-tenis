@@ -5,7 +5,7 @@
             <p>07 Nov 2021</p>
         </div>
         <div class="foot">
-            <i>Individual Masculino</i>
+            <i>Individual Masculino</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="/">Publico</a>
         </div>
         <div class="actions">
             <span class="btn btn-dark text-white p-2 m-2" @click="showResultados">Resultados</span>
@@ -66,7 +66,17 @@ export default {
         newPlayer(){
             this.submitted = true
             if (this.selected_zona != null && this.selected_name != null) {
-                console.log(this.selected_zona, this.selected_name)
+                console.log()
+                let data = {zona:this.selected_zona, name:this.selected_name}
+                axios.post(`${process.env.MIX_APP_URL}/player`, data).then(res =>{
+                    axios.get(`${process.env.MIX_APP_URL}/players`).then((res) => {
+
+                        this.jugadores_list = res.data
+                        this.selected_zona = null
+                        this.selected_name = ''
+                        this.submitted = false
+                    });
+                }).catch(console.error)
             }
 
         }
