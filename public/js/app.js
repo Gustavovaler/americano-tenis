@@ -2067,6 +2067,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PartidoCardEditable_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PartidoCardEditable.vue */ "./resources/js/components/PartidoCardEditable.vue");
 //
 //
 //
@@ -2107,6 +2108,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2115,7 +2135,8 @@ __webpack_require__.r(__webpack_exports__);
       show_jugadores: true,
       selected_zona: null,
       selected_name: '',
-      submitted: false
+      submitted: false,
+      matches_list: []
     };
   },
   created: function created() {
@@ -2124,6 +2145,10 @@ __webpack_require__.r(__webpack_exports__);
     axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/players")).then(function (res) {
       console.log(res.data);
       _this.jugadores_list = res.data;
+    });
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/matches")).then(function (res) {
+      console.log(res.data);
+      _this.matches_list = res.data;
     });
   },
   methods: {
@@ -2329,6 +2354,55 @@ __webpack_require__.r(__webpack_exports__);
   props: ["data_partido"],
   data: function data() {
     return {};
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["data_partido"],
+  data: function data() {
+    return {
+      res_j_1: 0,
+      res_j_2: 0
+    };
+  },
+  methods: {
+    editarResultado: function editarResultado(id) {
+      console.log(id);
+    }
   }
 });
 
@@ -6887,6 +6961,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-4e012af6]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-4e012af6]{\n    width: 80%;\n}\n.table-wrap[data-v-4e012af6]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-4e012af6]{\n    width: 100%;\n}\n.badge[data-v-4e012af6]{\n    translate: ;\n}\n.zona[data-v-4e012af6]{\n    font-size: .7em;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-40d25d7a]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-40d25d7a]{\n    width: 80%;\n}\n.table-wrap[data-v-40d25d7a]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-40d25d7a]{\n    width: 100%;\n}\n.badge[data-v-40d25d7a]{\n    translate: ;\n}\n.zona[data-v-40d25d7a]{\n    font-size: .7em;\n}\ninput[data-v-40d25d7a]{\n    font-size:.8em;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38001,6 +38099,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_style_index_0_id_40d25d7a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_style_index_0_id_40d25d7a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_style_index_0_id_40d25d7a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -38442,6 +38570,47 @@ component.options.__file = "resources/js/components/PartidoCard.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/PartidoCardEditable.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/PartidoCardEditable.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true& */ "./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true&");
+/* harmony import */ var _PartidoCardEditable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PartidoCardEditable.vue?vue&type=script&lang=js& */ "./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js&");
+/* harmony import */ var _PartidoCardEditable_vue_vue_type_style_index_0_id_40d25d7a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& */ "./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PartidoCardEditable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "40d25d7a",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PartidoCardEditable.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Posiciones.vue":
 /*!************************************************!*\
   !*** ./resources/js/components/Posiciones.vue ***!
@@ -38545,6 +38714,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PartidoCardEditable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Posiciones.vue?vue&type=script&lang=js&":
 /*!*************************************************************************!*\
   !*** ./resources/js/components/Posiciones.vue?vue&type=script&lang=js& ***!
@@ -38596,6 +38781,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCard_vue_vue_type_style_index_0_id_4e012af6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PartidoCard.vue?vue&type=style&index=0&id=4e012af6&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCard.vue?vue&type=style&index=0&id=4e012af6&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_style_index_0_id_40d25d7a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=style&index=0&id=40d25d7a&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -38668,6 +38866,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PartidoCardEditable_vue_vue_type_template_id_40d25d7a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Posiciones.vue?vue&type=template&id=0ef285b3&scoped=true&":
 /*!*******************************************************************************************!*\
   !*** ./resources/js/components/Posiciones.vue?vue&type=template&id=0ef285b3&scoped=true& ***!
@@ -38728,7 +38943,7 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "content-wrap" }, [
       _c("div", { staticClass: "section" }, [
-        _c("label", { attrs: { for: "" } }, [_vm._v("Nuevo Jugador")]),
+        _c("h4", { attrs: { for: "" } }, [_vm._v("Nuevo Jugador")]),
         _c("br"),
         _vm._v(" "),
         _c("input", {
@@ -38844,6 +39059,27 @@ var render = function () {
           ]
         ),
       ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c("div", { staticClass: "section" }, [
+        _c("h4", { attrs: { for: "" } }, [_vm._v("Cargar resultado")]),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "resultados" },
+          _vm._l(_vm.matches_list, function (partido) {
+            return _c("partido-card-editable", {
+              key: partido.id,
+              attrs: { data_partido: partido },
+            })
+          }),
+          1
+        ),
+      ]),
     ]),
   ])
 }
@@ -38866,6 +39102,21 @@ var staticRenderFns = [
       _c("i", [_vm._v("Individual Masculino")]),
       _vm._v("      "),
       _c("a", { attrs: { href: "/" } }, [_vm._v("Publico")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section" }, [
+      _c("h4", { attrs: { for: "" } }, [_vm._v("Nuevo Partido")]),
+      _c("br"),
+      _vm._v(" "),
+      _c("span", { staticClass: "btn btn-danger btn-block" }, [
+        _vm._v("Guardar Partido"),
+      ]),
+      _vm._v(" "),
+      _c("br"),
     ])
   },
 ]
@@ -39131,6 +39382,134 @@ var render = function () {
         _vm._v(" "),
         _c("td", { staticClass: "float-right" }, [
           _vm._v(_vm._s(_vm.data_partido.resultado_player_1)),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PartidoCardEditable.vue?vue&type=template&id=40d25d7a&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "table-wrap" }, [
+    _c("span", { staticClass: "zona" }, [
+      _vm._v("Zona: "),
+      _c("span", { staticClass: "badge badge-pill badge-danger" }, [
+        _vm._v(" " + _vm._s(_vm.data_partido.zona)),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("span", { staticClass: "float-right" }),
+    _vm._v(" "),
+    _c("table", [
+      _c("tr", [
+        _c("td", { staticClass: "player-name" }, [
+          _vm._v(" " + _vm._s(_vm.data_partido.player_1)),
+        ]),
+        _vm._v(" "),
+        _c("td", {}, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.res_j_1,
+                expression: "res_j_1",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              min: "0",
+              maxlength: "1",
+              name: "jug1",
+              size: "1",
+            },
+            domProps: { value: _vm.res_j_1 },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.res_j_1 = $event.target.value
+              },
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", { staticClass: "player-name" }, [
+          _c("span", { staticClass: "badge badge-pill badge-secondary" }),
+          _vm._v(" " + _vm._s(_vm.data_partido.player_2)),
+        ]),
+        _vm._v(" "),
+        _c("td", {}, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.res_j_2,
+                expression: "res_j_2",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              min: "0",
+              size: "1",
+              name: "jug2",
+              maxlength: "1",
+            },
+            domProps: { value: _vm.res_j_2 },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.res_j_2 = $event.target.value
+              },
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td"),
+        _vm._v(" "),
+        _c("td", [
+          _c(
+            "span",
+            {
+              staticClass: "btn btn-success btn-sm",
+              on: {
+                click: function ($event) {
+                  return _vm.editarResultado(_vm.data_partido.id)
+                },
+              },
+            },
+            [_vm._v("Guardar")]
+          ),
         ]),
       ]),
     ]),
@@ -51336,6 +51715,7 @@ var map = {
 	"./components/ExampleComponent.vue": "./resources/js/components/ExampleComponent.vue",
 	"./components/HeaderVue.vue": "./resources/js/components/HeaderVue.vue",
 	"./components/PartidoCard.vue": "./resources/js/components/PartidoCard.vue",
+	"./components/PartidoCardEditable.vue": "./resources/js/components/PartidoCardEditable.vue",
 	"./components/Posiciones.vue": "./resources/js/components/Posiciones.vue"
 };
 

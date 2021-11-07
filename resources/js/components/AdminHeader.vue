@@ -14,7 +14,7 @@
         </div>
         <div class="content-wrap">
             <div class="section">
-                <label for="">Nuevo Jugador</label><br>
+                <h4 for="">Nuevo Jugador</h4><br>
                 <input type="text" placeholder="Ingrese nombre" class="form-control" v-model="selected_name" :class="{'invalid': submitted && selected_name == ''}"><br>
                 <label for="">Zona</label><br>
                 <select name="" id="" class="form-control" v-model="selected_zona" :class="{'invalid': submitted && selected_zona == null}">
@@ -33,6 +33,24 @@
                     </ul>
                 </div>
             </div>
+            <br>
+            <!-- -*********- -->
+            <div class="section">
+                <h4 for="">Nuevo Partido</h4><br>
+
+
+                <span class="btn btn-danger btn-block" >Guardar Partido</span>
+                <br>
+
+            </div>
+            <!--  -->
+            <div class="section">
+                <h4 for="">Cargar resultado</h4><br>
+
+                <div class="resultados">
+                    <partido-card-editable v-for="partido in matches_list" :key="partido.id" :data_partido="partido"></partido-card-editable>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -40,20 +58,28 @@
 
 <script>
 import axios from 'axios';
+import PartidoCardEditable from './PartidoCardEditable.vue'
 export default {
+
     data() {
         return {
             jugadores_list:[],
             show_jugadores:true,
             selected_zona:null,
             selected_name:'',
-            submitted:false
+            submitted:false,
+            matches_list:[]
         }
     },
     created() {
         axios.get(`${process.env.MIX_APP_URL}/players`).then((res) => {
             console.log(res.data);
             this.jugadores_list = res.data
+        });
+
+        axios.get(`${process.env.MIX_APP_URL}/matches`).then((res) => {
+            console.log(res.data);
+            this.matches_list = res.data;
         });
     },
     methods: {
