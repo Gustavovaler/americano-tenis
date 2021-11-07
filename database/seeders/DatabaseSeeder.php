@@ -24,26 +24,38 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrador'
         ]);
 
-        // $player = Player::create([
-        //     'name' => 'Gustavo Valerio',
-        //     'zona' => 'A'
-        // ]);
-        // $player2 = Player::create([
-        //     'name' => 'A. Leguizamon',
-        //     'zona' => 'A'
-        // ]);
-        // Player::create([
-        //     'name' => 'Fernando Neira',
-        //     'zona' => 'A'
-        // ]);
-        // Player::create([
-        //     'name' => 'Sofia Valerio',
-        //     'zona' => 'B'
-        // ]);
-        // Player::create([
-        //     'name' => 'Juan Jorge',
-        //     'zona' => 'B'
-        // ]);
+        $player = Player::create([
+            'name' => 'Gustavo Valerio',
+            'zona' => 'A'
+        ]);
+        $player2 = Player::create([
+            'name' => 'A. Leguizamon',
+            'zona' => 'A'
+        ]);
+        Player::create([
+            'name' => 'Fernando Neira',
+            'zona' => 'A'
+        ]);
+        Player::create([
+            'name' => 'Sofia Valerio',
+            'zona' => 'B'
+        ]);
+        Player::create([
+            'name' => 'Juan Jorge',
+            'zona' => 'B'
+        ]);
+        Player::create([
+            'name' => 'Marcelo Barreiro',
+            'zona' => 'B'
+        ]);
+        Player::create([
+            'name' => 'Adrian Barraza',
+            'zona' => 'B'
+        ]);
+        Player::create([
+            'name' => 'Valentin',
+            'zona' => 'A'
+        ]);
 
         // PlayerMatch::create([
         //     'player_1' => $player->id,

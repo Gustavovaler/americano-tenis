@@ -134,7 +134,7 @@ ul{
     border: 1px solid red;
 }
 @media (min-width: 720px){
-    .content-wrap{
+    .content-wrap, .actions{
         width: 50%;
         margin: auto;
     }

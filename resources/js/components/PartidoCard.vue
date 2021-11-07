@@ -1,8 +1,9 @@
 <template>
     <div class="table-wrap">
+        <span class="zona">Zona: <span class="badge badge-pill badge-danger"> {{data_partido.zona}}</span></span>
         <table>
             <tr>
-                <td class="player-name"><span class="badge badge-pill badge-secondary"> </span> {{data_partido.player_1}}</td>
+                <td class="player-name"> {{data_partido.player_1}}</td>
                 <td class="float-right">{{data_partido.resultado_player_1}}</td>
             </tr>
             <tr>
@@ -42,6 +43,9 @@ table{
 }
 .badge{
     translate: ;
+}
+.zona{
+    font-size: .7em;
 }
 
 </style>

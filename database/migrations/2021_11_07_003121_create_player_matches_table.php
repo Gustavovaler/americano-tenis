@@ -25,6 +25,7 @@ class CreatePlayerMatchesTable extends Migration
             $table->string('torneo')->default('0000');
             $table->foreign('player_1')->references('id')->on('players')->onDelete('cascade');
             $table->foreign('player_2')->references('id')->on('players')->onDelete('cascade');
+            $table->string('zona')->default(null);
         });
     }
 

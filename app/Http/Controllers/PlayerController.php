@@ -37,6 +37,7 @@ class PlayerController extends Controller
                         $match = new PlayerMatch();
                         $match->player_1 = $player->id;
                         $match->player_2 = $key->id;
+                        $match->zona = $player->zona;
                         $match->save();
                         array_push($matched,$player->id.$key->id);
                         array_push($matched,$key->id.$player->id);

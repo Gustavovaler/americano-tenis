@@ -2324,6 +2324,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["data_partido"],
   data: function data() {
@@ -6837,7 +6838,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-6405d0be] {\n    margin: 0;\n    padding: 0;\n}\n.main-wrap[data-v-6405d0be] {\n    background: #adce5e;\n    padding: 15px 15px 10px 15px;\n    color: rgb(21, 22, 22);\n}\n.foot[data-v-6405d0be] {\n    background: #7cc054;\n    color: rgb(27, 29, 31);\n    font-size: 1.2em;\n    padding: 10px 10px 10px 15px;\n}\n.content-wrap[data-v-6405d0be]{\n    padding: 15px;\n}\n.resultados[data-v-6405d0be], .posiciones[data-v-6405d0be], .jugadores[data-v-6405d0be]{\n    width: 100%;\n    padding: 15px;\n}\n.section[data-v-6405d0be]{\n    border: 1px solid #cecece;\n    border-radius: 6px;\n    padding: 6px;\n}\nul[data-v-6405d0be]{\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-6405d0be]\n {\n  transition: opacity 1s\n}\n.fade-enter[data-v-6405d0be]\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\n.invalid[data-v-6405d0be]{\n    border: 1px solid red;\n}\n@media (min-width: 720px){\n.content-wrap[data-v-6405d0be]{\n        width: 50%;\n        margin: auto;\n}\n.main-wrap[data-v-6405d0be], .foot[data-v-6405d0be]{\n        width: 90%;\n        margin:auto;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-6405d0be] {\n    margin: 0;\n    padding: 0;\n}\n.main-wrap[data-v-6405d0be] {\n    background: #adce5e;\n    padding: 15px 15px 10px 15px;\n    color: rgb(21, 22, 22);\n}\n.foot[data-v-6405d0be] {\n    background: #7cc054;\n    color: rgb(27, 29, 31);\n    font-size: 1.2em;\n    padding: 10px 10px 10px 15px;\n}\n.content-wrap[data-v-6405d0be]{\n    padding: 15px;\n}\n.resultados[data-v-6405d0be], .posiciones[data-v-6405d0be], .jugadores[data-v-6405d0be]{\n    width: 100%;\n    padding: 15px;\n}\n.section[data-v-6405d0be]{\n    border: 1px solid #cecece;\n    border-radius: 6px;\n    padding: 6px;\n}\nul[data-v-6405d0be]{\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-6405d0be]\n {\n  transition: opacity 1s\n}\n.fade-enter[data-v-6405d0be]\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\n.invalid[data-v-6405d0be]{\n    border: 1px solid red;\n}\n@media (min-width: 720px){\n.content-wrap[data-v-6405d0be], .actions[data-v-6405d0be]{\n        width: 50%;\n        margin: auto;\n}\n.main-wrap[data-v-6405d0be], .foot[data-v-6405d0be]{\n        width: 90%;\n        margin:auto;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6885,7 +6886,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-4e012af6]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-4e012af6]{\n    width: 80%;\n}\n.table-wrap[data-v-4e012af6]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-4e012af6]{\n    width: 100%;\n}\n.badge[data-v-4e012af6]{\n    translate: ;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-4e012af6]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-4e012af6]{\n    width: 80%;\n}\n.table-wrap[data-v-4e012af6]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-4e012af6]{\n    width: 100%;\n}\n.badge[data-v-4e012af6]{\n    translate: ;\n}\n.zona[data-v-4e012af6]{\n    font-size: .7em;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39104,10 +39105,16 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "table-wrap" }, [
+    _c("span", { staticClass: "zona" }, [
+      _vm._v("Zona: "),
+      _c("span", { staticClass: "badge badge-pill badge-danger" }, [
+        _vm._v(" " + _vm._s(_vm.data_partido.zona)),
+      ]),
+    ]),
+    _vm._v(" "),
     _c("table", [
       _c("tr", [
         _c("td", { staticClass: "player-name" }, [
-          _c("span", { staticClass: "badge badge-pill badge-secondary" }),
           _vm._v(" " + _vm._s(_vm.data_partido.player_1)),
         ]),
         _vm._v(" "),
