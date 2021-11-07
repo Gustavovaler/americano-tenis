@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/matches', [App\Http\Controllers\ResultadoController::class, 'getPartidos']);
 Route::get('/matches/calculate' , [PlayerController::class, 'autoCalculateMatches']);
+route::post('/matches/edit' , [PlayerController::class, 'updateResult']);
 Route::get('/posiciones', [App\Http\Controllers\ResultadoController::class, 'getPosiciones']);
 Route::get('/players', function(){return Player::all();});
 Route::post('/player', [PlayerController::class, 'store']);

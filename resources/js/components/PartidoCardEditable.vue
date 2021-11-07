@@ -5,11 +5,11 @@
         <table>
             <tr>
                 <td class="player-name"> {{data_partido.player_1}}</td>
-                <td class=""><input type="number"  min="0"  maxlength="1" name="jug1" size="1" class="form-control" v-model="res_j_1"></td>
+                <td class=""><input type="number"  min="0"  maxlength="1" max="7"  name="jug1" size="1" class="form-control" v-model="res_j_1"></td>
             </tr>
             <tr>
                 <td class="player-name"><span class="badge badge-pill badge-secondary"> </span> {{data_partido.player_2}}</td>
-                <td class=""><input type="number"  min="0"  size="1" name="jug2" maxlength="1" class="form-control" v-model="res_j_2"></td>
+                <td class=""><input type="number" min="0"  size="1" name="jug2" max="7" maxlength="1" class="form-control" v-model="res_j_2"></td>
             </tr>
             <tr>
                 <td></td>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     props: ["data_partido"],
     data() {
@@ -30,7 +31,12 @@ export default {
     },
     methods: {
         editarResultado(id){
-            console.log(id)
+            let match_data={id:id, res_jug_1:this.res_j_1,
+             res_jug_1:this.res_j_2}
+
+            axios.post(`${process.env.MIX_APP_URL}/matches/edit`, match_data).then(res =>{
+                console.log(res.data)
+            })
         }
     },
 };

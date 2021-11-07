@@ -48,4 +48,15 @@ class PlayerController extends Controller
         }
         return $matched;
     }
+
+    public function updateResult(Request $request){
+
+        $match = PlayerMatch::find($request->id);
+        $match->resultado_player_1 = intval($request->res_jug_1);
+        $match->resultado_player_2 = intval($request->res_jug_2);
+        $match->save();
+
+        return
+
+    }
 }

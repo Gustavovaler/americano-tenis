@@ -2142,11 +2142,11 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/players")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
       console.log(res.data);
       _this.jugadores_list = res.data;
     });
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/matches")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
       console.log(res.data);
       _this.matches_list = res.data;
     });
@@ -2165,8 +2165,8 @@ __webpack_require__.r(__webpack_exports__);
           zona: this.selected_zona,
           name: this.selected_name
         };
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("http://americano.test", "/player"), data).then(function (res) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/players")).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano.test", "/player"), data).then(function (res) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
             _this2.jugadores_list = res.data;
             _this2.selected_zona = null;
             _this2.selected_name = '';
@@ -2287,11 +2287,11 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/matches")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
       console.log(res.data);
       _this.matches_list = res.data;
     });
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/players")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
       console.log(res.data);
       _this.jugadores_list = res.data;
     });
@@ -2303,7 +2303,7 @@ __webpack_require__.r(__webpack_exports__);
       this.show_resultados = true;
       this.show_jugadores = false;
       this.show_posiciones = false;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/matches")).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
         console.log(res.data);
         _this2.matches_list = res.data;
       });
@@ -2370,6 +2370,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2391,6 +2395,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["data_partido"],
   data: function data() {
@@ -2401,7 +2406,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     editarResultado: function editarResultado(id) {
-      console.log(id);
+      var match_data = _defineProperty({
+        id: id,
+        res_jug_1: this.res_j_1
+      }, "res_jug_1", this.res_j_2);
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano.test", "/matches/edit"), match_data).then(function (res) {
+        console.log(res.data);
+      });
     }
   }
 });
@@ -2437,7 +2449,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("http://americano.test", "/posiciones")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/posiciones")).then(function (res) {
       _this.posiciones_list = res.data;
     })["catch"](console.error);
   }
@@ -39441,6 +39453,7 @@ var render = function () {
               type: "number",
               min: "0",
               maxlength: "1",
+              max: "7",
               name: "jug1",
               size: "1",
             },
@@ -39479,6 +39492,7 @@ var render = function () {
               min: "0",
               size: "1",
               name: "jug2",
+              max: "7",
               maxlength: "1",
             },
             domProps: { value: _vm.res_j_2 },
