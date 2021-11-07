@@ -2372,8 +2372,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -2406,11 +2404,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     editarResultado: function editarResultado(id) {
-      var match_data = _defineProperty({
+      var match_data = {
         id: id,
-        res_jug_1: this.res_j_1
-      }, "res_jug_1", this.res_j_2);
-
+        res_1: this.res_j_1,
+        res_2: this.res_j_2
+      };
+      console.log(match_data);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano.test", "/matches/edit"), match_data).then(function (res) {
         console.log(res.data);
       });
@@ -39393,7 +39392,7 @@ var render = function () {
         ]),
         _vm._v(" "),
         _c("td", { staticClass: "float-right" }, [
-          _vm._v(_vm._s(_vm.data_partido.resultado_player_1)),
+          _vm._v(_vm._s(_vm.data_partido.resultado_player_2)),
         ]),
       ]),
     ]),

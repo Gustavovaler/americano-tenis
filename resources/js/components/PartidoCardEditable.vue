@@ -31,8 +31,9 @@ export default {
     },
     methods: {
         editarResultado(id){
-            let match_data={id:id, res_jug_1:this.res_j_1,
-             res_jug_1:this.res_j_2}
+            let match_data={id:id, res_1:this.res_j_1,res_2:this.res_j_2}
+
+             console.log(match_data)
 
             axios.post(`${process.env.MIX_APP_URL}/matches/edit`, match_data).then(res =>{
                 console.log(res.data)

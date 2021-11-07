@@ -8,7 +8,7 @@
             </tr>
             <tr>
                 <td class="player-name"><span class="badge badge-pill badge-secondary"> </span> {{data_partido.player_2}}</td>
-                <td class="float-right">{{data_partido.resultado_player_1}}</td>
+                <td class="float-right">{{data_partido.resultado_player_2}}</td>
             </tr>
         </table>
     </div>
