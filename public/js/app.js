@@ -2142,11 +2142,11 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/players")).then(function (res) {
       console.log(res.data);
       _this.jugadores_list = res.data;
     });
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/matches")).then(function (res) {
       console.log(res.data);
       _this.matches_list = res.data;
     });
@@ -2165,8 +2165,8 @@ __webpack_require__.r(__webpack_exports__);
           zona: this.selected_zona,
           name: this.selected_name
         };
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano.test", "/player"), data).then(function (res) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano-tenis.test", "/player"), data).then(function (res) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/players")).then(function (res) {
             _this2.jugadores_list = res.data;
             _this2.selected_zona = null;
             _this2.selected_name = '';
@@ -2287,11 +2287,11 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/matches")).then(function (res) {
       console.log(res.data);
       _this.matches_list = res.data;
     });
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/players")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/players")).then(function (res) {
       console.log(res.data);
       _this.jugadores_list = res.data;
     });
@@ -2303,7 +2303,7 @@ __webpack_require__.r(__webpack_exports__);
       this.show_resultados = true;
       this.show_jugadores = false;
       this.show_posiciones = false;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/matches")).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/matches")).then(function (res) {
         console.log(res.data);
         _this2.matches_list = res.data;
       });
@@ -2410,7 +2410,7 @@ __webpack_require__.r(__webpack_exports__);
         res_2: this.res_j_2
       };
       console.log(match_data);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano.test", "/matches/edit"), match_data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat("https://americano-tenis.test", "/matches/edit"), match_data).then(function (res) {
         console.log(res.data);
       });
     }
@@ -2448,7 +2448,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano.test", "/posiciones")).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat("https://americano-tenis.test", "/posiciones")).then(function (res) {
       _this.posiciones_list = res.data;
     })["catch"](console.error);
   }
@@ -6923,7 +6923,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-6405d0be] {\n    margin: 0;\n    padding: 0;\n}\n.main-wrap[data-v-6405d0be] {\n    background: #adce5e;\n    padding: 15px 15px 10px 15px;\n    color: rgb(21, 22, 22);\n}\n.foot[data-v-6405d0be] {\n    background: #7cc054;\n    color: rgb(27, 29, 31);\n    font-size: 1.2em;\n    padding: 10px 10px 10px 15px;\n}\n.content-wrap[data-v-6405d0be]{\n    padding: 15px;\n}\n.resultados[data-v-6405d0be], .posiciones[data-v-6405d0be], .jugadores[data-v-6405d0be]{\n    width: 100%;\n    padding: 15px;\n}\n.section[data-v-6405d0be]{\n    border: 1px solid #cecece;\n    border-radius: 6px;\n    padding: 6px;\n}\nul[data-v-6405d0be]{\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-6405d0be]\n {\n  transition: opacity 1s\n}\n.fade-enter[data-v-6405d0be]\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\n.invalid[data-v-6405d0be]{\n    border: 1px solid red;\n}\n@media (min-width: 720px){\n.content-wrap[data-v-6405d0be], .actions[data-v-6405d0be]{\n        width: 50%;\n        margin: auto;\n}\n.main-wrap[data-v-6405d0be], .foot[data-v-6405d0be]{\n        width: 90%;\n        margin:auto;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-6405d0be] {\r\n    margin: 0;\r\n    padding: 0;\n}\n.main-wrap[data-v-6405d0be] {\r\n    background: #adce5e;\r\n    padding: 15px 15px 10px 15px;\r\n    color: rgb(21, 22, 22);\n}\n.foot[data-v-6405d0be] {\r\n    background: #7cc054;\r\n    color: rgb(27, 29, 31);\r\n    font-size: 1.2em;\r\n    padding: 10px 10px 10px 15px;\n}\n.content-wrap[data-v-6405d0be]{\r\n    padding: 15px;\n}\n.resultados[data-v-6405d0be], .posiciones[data-v-6405d0be], .jugadores[data-v-6405d0be]{\r\n    width: 100%;\r\n    padding: 15px;\n}\n.section[data-v-6405d0be]{\r\n    border: 1px solid #cecece;\r\n    border-radius: 6px;\r\n    padding: 6px;\n}\nul[data-v-6405d0be]{\r\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-6405d0be]\r\n {\r\n  transition: opacity 1s\n}\n.fade-enter[data-v-6405d0be]\r\n/* .fade-leave-active in <2.1.8 */\r\n\r\n{\r\n  opacity: 0\n}\n.invalid[data-v-6405d0be]{\r\n    border: 1px solid red;\n}\n@media (min-width: 720px){\n.content-wrap[data-v-6405d0be], .actions[data-v-6405d0be]{\r\n        width: 50%;\r\n        margin: auto;\n}\n.main-wrap[data-v-6405d0be], .foot[data-v-6405d0be]{\r\n        width: 90%;\r\n        margin:auto;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6947,7 +6947,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-475f6d5e] {\n    margin: 0;\n    padding: 0;\n}\n.main-wrap[data-v-475f6d5e] {\n    background: #0288d1;\n    padding: 15px 15px 10px 15px;\n    color: aliceblue;\n}\n.foot[data-v-475f6d5e] {\n    background: #0274b2;\n    color: aliceblue;\n    font-size: 1.2em;\n    padding: 10px 10px 10px 15px;\n}\n.actions[data-v-475f6d5e]{\n    width: 100%;\n    color: #fff;\n    align-items: center;\n}\n.resultados[data-v-475f6d5e], .posiciones[data-v-475f6d5e], .jugadores[data-v-475f6d5e]{\n    width: 100%;\n    padding: 15px;\n}\nul[data-v-475f6d5e]{\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-475f6d5e]\n {\n  transition: opacity 1s\n}\n.fade-enter[data-v-475f6d5e]\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\n@media (min-width: 720px){\n.content-wrap[data-v-475f6d5e]{\n        width: 50%;\n        margin: auto;\n}\n.main-wrap[data-v-475f6d5e], .foot[data-v-475f6d5e]{\n        width: 90%;\n        margin:auto;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-475f6d5e] {\r\n    margin: 0;\r\n    padding: 0;\n}\n.main-wrap[data-v-475f6d5e] {\r\n    background: #0288d1;\r\n    padding: 15px 15px 10px 15px;\r\n    color: aliceblue;\n}\n.foot[data-v-475f6d5e] {\r\n    background: #0274b2;\r\n    color: aliceblue;\r\n    font-size: 1.2em;\r\n    padding: 10px 10px 10px 15px;\n}\n.actions[data-v-475f6d5e]{\r\n    width: 100%;\r\n    color: #fff;\r\n    align-items: center;\n}\n.resultados[data-v-475f6d5e], .posiciones[data-v-475f6d5e], .jugadores[data-v-475f6d5e]{\r\n    width: 100%;\r\n    padding: 15px;\n}\nul[data-v-475f6d5e]{\r\n    padding-left: 20px;\n}\n.fade-enter-active[data-v-475f6d5e]\r\n {\r\n  transition: opacity 1s\n}\n.fade-enter[data-v-475f6d5e]\r\n/* .fade-leave-active in <2.1.8 */\r\n\r\n{\r\n  opacity: 0\n}\n@media (min-width: 720px){\n.content-wrap[data-v-475f6d5e]{\r\n        width: 50%;\r\n        margin: auto;\n}\n.main-wrap[data-v-475f6d5e], .foot[data-v-475f6d5e]{\r\n        width: 90%;\r\n        margin:auto;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6971,7 +6971,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-4e012af6]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-4e012af6]{\n    width: 80%;\n}\n.table-wrap[data-v-4e012af6]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-4e012af6]{\n    width: 100%;\n}\n.badge[data-v-4e012af6]{\n    translate: ;\n}\n.zona[data-v-4e012af6]{\n    font-size: .7em;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-4e012af6]{\r\n    float: right;\r\n    width: 20%;\n}\n.player-name[data-v-4e012af6]{\r\n    width: 80%;\n}\n.table-wrap[data-v-4e012af6]{\r\n    width: 100%;\r\n    padding: 10px 20px;\r\n    border: 1px solid #cecece;\r\n    border-radius: 8px;\r\n    margin-bottom: 3px;\n}\ntable[data-v-4e012af6]{\r\n    width: 100%;\n}\n.badge[data-v-4e012af6]{\r\n    translate: ;\n}\n.zona[data-v-4e012af6]{\r\n    font-size: .7em;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6995,7 +6995,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-40d25d7a]{\n    float: right;\n    width: 20%;\n}\n.player-name[data-v-40d25d7a]{\n    width: 80%;\n}\n.table-wrap[data-v-40d25d7a]{\n    width: 100%;\n    padding: 10px 20px;\n    border: 1px solid #cecece;\n    border-radius: 8px;\n    margin-bottom: 3px;\n}\ntable[data-v-40d25d7a]{\n    width: 100%;\n}\n.badge[data-v-40d25d7a]{\n    translate: ;\n}\n.zona[data-v-40d25d7a]{\n    font-size: .7em;\n}\ninput[data-v-40d25d7a]{\n    font-size:.8em;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.float-right[data-v-40d25d7a]{\r\n    float: right;\r\n    width: 20%;\n}\n.player-name[data-v-40d25d7a]{\r\n    width: 80%;\n}\n.table-wrap[data-v-40d25d7a]{\r\n    width: 100%;\r\n    padding: 10px 20px;\r\n    border: 1px solid #cecece;\r\n    border-radius: 8px;\r\n    margin-bottom: 3px;\n}\ntable[data-v-40d25d7a]{\r\n    width: 100%;\n}\n.badge[data-v-40d25d7a]{\r\n    translate: ;\n}\n.zona[data-v-40d25d7a]{\r\n    font-size: .7em;\n}\ninput[data-v-40d25d7a]{\r\n    font-size:.8em;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -51761,7 +51761,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21.4","name":"axios","escapedName":"axios","rawSpec":"^0.21.4","saveSpec":null,"fetchSpec":"^0.21.4"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21.4","_where":"C:\\\\laragon\\\\www\\\\americano","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\laragon\\\\www\\\\americano-tenis"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"C:\\\\laragon\\\\www\\\\americano-tenis","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
